@@ -14,6 +14,19 @@ class Movie
     $this->language = $_language;
   }
 
+  /* Inserisco i dati in un Array per poi ciclarlo */
+
+  public function joinFilms()
+  {
+    $arrFilm = [];
+    $arrFilm[] = $this->title;
+    $arrFilm[] = $this->category;
+    $arrFilm[] = $this->language;
+    return $arrFilm;
+  }
+
+  /* insierisco i dati singolarmente */
+
   public function getTitle()
   {
     return $this->title;
